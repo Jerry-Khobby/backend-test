@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv").config();
-// setting up 
 const mongoose = require("mongoose");
 const route = require("./routes/routes");
 const bodyParser= require("body-parser");
@@ -12,7 +11,7 @@ const  cors= require("cors");
 
 
 
-
+app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({extended:false}));
