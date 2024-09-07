@@ -119,7 +119,7 @@ res.status(200).json(responseData);
 const deleteItem = async(req,res)=>{
   const {id} =req.params;
   try{
-    const item= await Inventory.findByIdAndDelete({ id:req.params.id });
+    const item= await Inventory.findOneAndDelete({ id: id });
     if(!item){
       return res.status(404)
       .json({ error: 'Item not found' });
