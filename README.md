@@ -187,23 +187,31 @@ The API includes basic data validation:
 
 ## Project Structure
 
+Here’s the edited project structure reflecting the correct files and directories:
+
 ```
 ├── controllers/
-│   └── inventoryController.js
+│   └── controller.js
 ├── models/
-│   └── inventoryModel.js
+│   ├── counterModels.js
+│   └── inventory.js
 ├── routes/
-│   └── inventoryRoutes.js
-├── app.js
-├── server.js
-└── .env
+│   └── routes.js
+├── .env
+├── .gitignore
+├── index.js
 ```
 
 - **controllers/**: Contains the logic for handling requests and responses.
-- **models/**: Defines the schema for inventory items.
-- **routes/**: Manages the routing for inventory-related endpoints.
-- **app.js**: Initializes the Express application.
-- **server.js**: Starts the server.
+- **models/**: Defines the schemas for your MongoDB collections.
+  - **counterModels.js**: Manages the counter model, which may be used for tracking sequences.
+  - **inventory.js**: Defines the schema for inventory items.
+- **routes/**: Manages the routing for the inventory-related endpoints.
+  - **routes.js**: Centralized routing file for all endpoints.
+- **.env**: Stores environment variables.
+- **.gitignore**: Specifies files and directories to be ignored by Git.
+- **index.js**: The main entry point for the application.
+
 
 ## Hosting and Repository
 
