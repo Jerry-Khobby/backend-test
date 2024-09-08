@@ -33,6 +33,7 @@ This API allows for basic CRUD (Create, Read, Update, Delete) operations on inve
 - **Endpoint:** `POST /inventory`
 - **Description:** Adds a new inventory item.
 - **Request Body:**
+- **Using this dummy object as example:**
     ```json
     {
         "name": "Laptop",
@@ -46,7 +47,6 @@ This API allows for basic CRUD (Create, Read, Update, Delete) operations on inve
 - **Response:**
     ```json
     {
-        "id": "unique_identifier",
         "name": "Laptop",
         "category": "Electronics",
         "quantity": 10,
@@ -63,7 +63,7 @@ This API allows for basic CRUD (Create, Read, Update, Delete) operations on inve
     ```json
     [
         {
-            "id": "unique_identifier",
+            "id": 1,
             "name": "Laptop",
             "category": "Electronics",
             "quantity": 10,
@@ -81,7 +81,7 @@ This API allows for basic CRUD (Create, Read, Update, Delete) operations on inve
 - **Response:**
     ```json
     {
-        "id": "unique_identifier",
+        "id": 1,
         "name": "Laptop",
         "category": "Electronics",
         "quantity": 10,
@@ -108,7 +108,7 @@ This API allows for basic CRUD (Create, Read, Update, Delete) operations on inve
 - **Response:**
     ```json
     {
-        "id": "unique_identifier",
+        "id": 1,
         "name": "Gaming Laptop",
         "category": "Electronics",
         "quantity": 8,
@@ -165,7 +165,7 @@ To interact with the API online, use the following endpoints, where the base URL
 3. **Set up environment variables:**
    Create a `.env` file in the root directory and add the following:
     ```env
-    PORT=3000
+    PORT=3000 or any Port number of your choice
     MONGODB_URI=your_mongodb_connection_string
     ```
 
