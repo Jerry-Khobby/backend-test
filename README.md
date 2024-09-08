@@ -1,4 +1,3 @@
-Here's the revised README for your Inventory Management API:
 
 ---
 
@@ -154,7 +153,7 @@ To interact with the API online, use the following endpoints, where the base URL
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/inventory-management-api.git
+    git clone https://github.com/Jerry-Khobby/backend-test.git
     cd inventory-management-api
     ```
 
@@ -172,7 +171,7 @@ To interact with the API online, use the following endpoints, where the base URL
 
 4. **Start the server:**
     ```bash
-    npm start
+    node index.js or nodemon
     ```
 
 ### Testing the API
