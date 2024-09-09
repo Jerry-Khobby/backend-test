@@ -9,7 +9,13 @@ const createInventory = async(req,res)=>{
   if (!name || !category || !quantity || !price || !supplier) {
     return res.status(400).json({ error: 'All fields are required' });
   }
-  // validate the price 
+
+  // checking to have a positive quantity value 
+  if(quantity<0 || quantity===0) return res.status(400).json({ error: 'Quantity cannot be negative'})
+  
+    // Validate price - check if it's a number (allowing negatives)
+  if(Math.sign(price)===-1) return res.status(400).json({error: 'Price cannot be negative'});
+  
   try{
     const newInventory = new Inventory({
       name,
